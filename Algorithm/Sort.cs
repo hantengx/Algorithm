@@ -30,12 +30,12 @@ namespace Algorithm
             var tempArray = new List<int>();
             do
             {
-                for (int l = 0; l < AA.Count; l++)
+                for (int j = 0; j < AA.Count; j++)
                 {
-                    if (AA[l].Count != 0)
+                    if (AA[j].Count != 0)
                     {
-                        tempArray.Add(AA[l][0]);
-                        AA[l].RemoveAt(0);
+                        tempArray.Add(AA[j][0]);
+                        AA[j].RemoveAt(0);
                     }
                 }
                 tempArray.Sort();
