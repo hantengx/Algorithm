@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace Algorithm
 {
@@ -45,6 +46,24 @@ namespace Algorithm
             } while (tempArray.Count != 0);
 
             return mergeArray;
+        }
+
+        public static void Shuffle<T>(List<T> ts)
+        {
+            var random = new Random();
+            var length = ts.Count;
+            for (int i = length - 1; i > 0; i--)
+            {
+                var index = random.Next(i + 1);
+                var tmp = ts[index];
+                ts[index] = ts[i];
+                ts[i] = tmp;
+            }
+        }
+
+        public static void PrintList<T>(List<T> ts)
+        {
+            //foreach
         }
     }
 }

@@ -7,19 +7,18 @@ namespace Algorithm
     {
         static void Main(string[] args)
         {
+            var random = new Random();
             var numbers = new List<int>();
             for (int i = 0; i < 20; i++)
             {
-                int num = 0;
-                numbers.Add(num);
+                numbers.Add(i);
             }
-            
-            var result = Sort.MergeSort(numbers, 4);
+            Sort.Shuffle(numbers);
+            numbers.ForEach(x => Console.Write(x + ","));
+            Console.WriteLine("");
 
-            for (int i = 0; i < result.Count; i++)
-            {
-                Console.WriteLine(result[i]);
-            }
+            var result = Sort.MergeSort(numbers, 4);
+            result.ForEach(x => Console.Write(x + ","));
         }
     }
 }
