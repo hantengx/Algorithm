@@ -60,10 +60,5 @@ namespace Algorithm
                 ts[i] = tmp;
             }
         }
-
-        public static void PrintList<T>(List<T> ts)
-        {
-            //foreach
-        }
     }
 }
