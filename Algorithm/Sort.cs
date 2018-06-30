@@ -20,9 +20,9 @@ namespace Algorithm
             }
 
             var AA = new List<List<int>>();
-            for (int i = 0; i < list.Count; i += list.Count / 4)
+            for (int i = 0; i < list.Count; i += list.Count / k)
             {
-                var newArray = new List<int>(list.Skip(i).Take(list.Count / 4));
+                var newArray = new List<int>(list.Skip(i).Take(list.Count / k));
                 AA.Add(MergeSort(newArray, k));
             }
 
