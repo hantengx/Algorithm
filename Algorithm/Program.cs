@@ -31,7 +31,8 @@ namespace Algorithm
             ////var result = Sort.MergeSort(numbers, 2);
             //var result = HeapSort.Sort(numbers);
             //result.ForEach(Print);
-            TestPerformance(999, 1000);
+            //TestPerformance(999, 1000);
+            Console.WriteLine("reuslt: " + ReverseString("hello!"));
         }
 
         private static void TestPerformance(int numberCount, int times)
@@ -52,6 +53,20 @@ namespace Algorithm
             }
             stopWatch.Stop();
             Console.WriteLine("time is: " + stopWatch.Elapsed);
+        }
+
+        public static string ReverseString(string s)
+        {
+            int length = s.Length;
+            char[] dst = new char[length];
+            int index = length - 1;
+            foreach (var c in s)
+            {
+                dst[index] = c;
+                index--;
+            }
+
+            return new string(dst);
         }
     }
 }

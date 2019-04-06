@@ -39,7 +39,7 @@ namespace Algorithm
         /// </summary>
         /// <param name="vs"></param>
         /// <param name="from"></param>
-        public static void Modify(List<int> vs, int from, int end)
+        protected static void Modify(List<int> vs, int from, int end)
         {
             //Console.WriteLine("join modify j: " + from);
             while (2 * from + 1 <= end)
